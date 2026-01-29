@@ -37,6 +37,12 @@ except ImportError:
     GROQ_AVAILABLE = False
 
 # =============================================================================
+# GROQ API KEY (Hardcoded)
+# =============================================================================
+# Replace with your actual Groq API key
+GROQ_API_KEY = "YOUR_GROQ_API_KEY_HERE"  # e.g., "gsk_..."
+
+# =============================================================================
 # PAGE CONFIGURATION
 # =============================================================================
 st.set_page_config(
@@ -549,21 +555,7 @@ def main():
         st.markdown("## 📋 Input Section")
         st.markdown("---")
         
-        # API Key Input
-        st.markdown("### 🔑 Groq API Key")
-        api_key = st.text_input(
-            label="Enter your Groq API key",
-            type="password",
-            placeholder="gsk_...",
-            help="Get your free API key at console.groq.com/keys",
-            label_visibility="collapsed"
-        )
-        if api_key:
-            st.success("✅ API Key entered")
-        else:
-            st.info("🔗 [Get free API key](https://console.groq.com/keys)")
-        
-        st.markdown("---")
+
         
         # Job Description Input
         st.markdown("### Job Description")
@@ -594,10 +586,9 @@ def main():
         st.markdown("---")
         st.markdown("### ℹ️ How It Works")
         st.markdown("""
-        1. **Enter** your Groq API key
-        2. **Paste** the job description
-        3. **Upload** your PDF resume
-        4. **Click** Analyze Resume
+        1. **Paste** the job description
+        2. **Upload** your PDF resume
+        3. **Click** Analyze Resume
         """)
     
     # Main Content Area
@@ -622,7 +613,7 @@ def main():
                 return
             
             # Analyze with LLM
-            llm_result = analyze_resume_with_llm(resume_text, job_description, api_key)
+            llm_result = analyze_resume_with_llm(resume_text, job_description, GROQ_API_KEY)
             
             # Check for errors
             if llm_result.get("error"):
