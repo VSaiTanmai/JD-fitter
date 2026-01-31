@@ -3,6 +3,7 @@
   <img src="https://img.shields.io/badge/Streamlit-FF4B4B?style=for-the-badge&logo=streamlit&logoColor=white" alt="Streamlit"/>
   <img src="https://img.shields.io/badge/Llama_3-AI_Powered-667eea?style=for-the-badge&logo=meta&logoColor=white" alt="Llama 3"/>
   <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License"/>
+  <img src="https://img.shields.io/badge/Last_Updated-January_2026-orange?style=for-the-badge" alt="Last Updated"/>
 </p>
 
 <h1 align="center">🎯 SmartMatch AI</h1>
